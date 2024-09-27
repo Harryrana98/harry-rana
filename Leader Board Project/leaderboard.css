@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+   
+
+}
+
+body {
+    background: url(./stadium-cricket.jpg);
+    background-position: center;
+    background-origin: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leader_board {
+    height: 400px;
+    width: 75%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+}
+
+.leader_board h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+
+.leader_board form {
+    text-align: center;
+
+}
+
+.leader_board input {
+    width: 150px;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 15px;
+    padding-left: 10px;
+    font-weight: 600;
+
+}
+
+#country {
+    width: 150px;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 15px;
+    color: #fff;
+    background-color: #413e3e;
+    font-weight: 600;
+
+}
+
+#addplayer {
+    width: 13%;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #68ca08;
+    border: none;
+    color: #fff;
+    display: block;
+    margin: 10px auto;
+    font-weight: 600;
+
+}
+
+#table {
+    color: #fff;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+#table button{
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    width: 35px;
+    margin:3px  25px;
+}

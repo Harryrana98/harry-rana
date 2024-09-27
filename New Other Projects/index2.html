@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let arr=[1,2,3]
+        // let [a, ,c]=arr
+        // console.log(a,c)
+
+        // function usestate(initialvalue){
+        //     let x=initialvalue
+        //     // return [x,x*x]
+        //     return {original:x,square:x*x}
+
+        // }
+        // // const a=usestate(4);
+        // // const x= a[0]
+        // // const y=a[1]
+        // // const [x,y]=usestate(4)
+        // const {original,square}=usestate(4)
+        // console.log(original*square)
+
+        let food = { breakfast: "poha", lunch: "daal", dinner: "eggs" }
+
+        // const breakfast = food.breakfast;
+        // const lunch = food.lunch;
+        // const dinner = food.dinner;
+
+        const { breakfast, lunch, dinner } = food; //DESTRUCTURING
+
+        document.write("I love " + breakfast + " for breakfast, " + lunch + " for lunch and " + dinner + " for dinner");
+
+        document.write("<br>")
+
+        // TEMPLATE LITERAL
+        document.write(`I love ${breakfast} for breakfast, ${lunch} for lunch and ${dinner} for dinner`);
+    </script>
+</body>
+
+</html>

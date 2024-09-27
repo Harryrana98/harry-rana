@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=te, initial-scale=1.0">
+    <title>Text Change</title>
+    <style>
+        body {
+            background-color: tan;
+        }
+
+        .text {
+            width: 600px;
+            margin: 100px auto;
+            text-align: center;
+        
+        }
+
+        input {
+            width: 160px;
+            height: 20px;
+        }
+
+        button{
+            width: 100px;
+            height: 27px;
+            color: #fff;
+            background-color: maroon;
+            cursor: pointer;
+        }
+
+        #italic{
+           font-style: italic;
+        }
+        #bold{
+           font-weight: bold;
+        }
+        #upper{
+            text-transform: uppercase;
+           
+        }
+        #lower{
+            text-transform: lowercase;
+        }
+
+        h1{
+            text-align: center;
+            font-weight: bolder;
+            font-family: sans-serif;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Text Style Changer</h1>
+
+    <div class="text">
+
+        <input type="text" placeholder="Text Here">
+        <button   id="italic" onclick="italic()" ondblclick="Italic()">Italic</button>
+        <button id="bold" onclick="bold()" ondblclick="Bold()">Bold</button>
+        <button id="upper" onclick="upper()">Uppercase</button>
+        <button id="lower" onclick="lower()">Lowercase</button>
+
+    </div>
+
+</body>
+
+<script>
+
+
+    let input = document.querySelector("input");
+
+    function italic() {
+
+
+        input.style.fontStyle = "Italic";
+    }
+    function Italic() {
+
+
+        input.style.fontStyle = "unset";
+    }
+
+
+    function Bold() {
+
+        input.style.fontWeight = "100";
+    }
+
+
+
+    function bold() {
+
+
+        input.style.fontWeight = "bold";
+    }
+    function upper() {
+
+
+        input.style.textTransform="uppercase";
+    }
+    
+    function lower() {
+
+        input.style.textTransform = "lowercase";
+
+    }
+   
+</script>
+
+</html>

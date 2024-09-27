@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.game_container{
+    width: 40%;
+    height: 250px;
+    background-color: aqua;
+    margin:  50px auto;
+    position: relative;
+    
+}
+.circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    left: 32px;
+    animation:circle 3.25s ease-in-out 0ms infinite alternate ;
+    
+}
+
+@keyframes circle{
+    0%{
+        position: absolute;
+        top: 50%;
+        left: 7%;
+
+
+    }
+
+    50%{
+        position: absolute;
+        left: 84%;
+        top: 50%;
+
+    }
+
+    /* 75%{
+        position: absolute;
+        left: 10px;
+    } */
+
+    100%{
+        position: absolute;
+        left:7%;
+        top: 50%;
+
+    }
+
+
+}
+
+.left_colum{
+    width: 7%;
+    height: 110px;
+    background-color: black;
+    position: absolute;
+    animation:left 1.75s ease-in-out 0ms infinite alternate-reverse ;
+}
+
+@keyframes left{
+    0%{ top: 0;
+        position: absolute;
+
+    
+    }
+
+
+    100%{ 
+        position: absolute;
+        top: 140px;
+    }
+}
+
+.right_colum{
+    width: 7%;
+    height: 110px;
+    background-color: black;
+    position: absolute;
+    left: 405px;
+    animation:right 1.75s ease-in-out 0ms infinite alternate ;
+}
+
+
+@keyframes right{
+    0%{ top: 0;
+        position: absolute;
+
+    
+    }
+
+
+    100%{ 
+        position: absolute;
+        top: 140px;
+    }
+}

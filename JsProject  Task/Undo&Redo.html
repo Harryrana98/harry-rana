@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset,Undo & Redo</title>
+</head>
+
+<body>
+
+    <style>
+       
+
+        #wrapper {
+            height: 80vh;
+            width: 100%;
+            position: relative;
+        }
+
+        .box {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+        }
+
+        .btn{
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .btn button{
+            background-color: #4CAF50;
+        }
+        .btn button:disabled{
+            background-color: gray;
+            opacity: 0.9;
+        }
+
+    </style>
+
+    <div class="btn">
+        <button id="reset" disabled>Reset</button>
+        <button id="undo" disabled>Undo</button>
+        <button id="redo" disabled>Redo</button>
+    </div>
+
+    <div id="wrapper">
+    </div>
+
+    <!-- <div style="width: 15px; height: 15px; border-radius: 50%; background-color: red;"></div> -->
+
+</body>
+
+<script>
+
+    let reset = document.querySelector("#reset")
+    let undo = document.querySelector("#undo")
+    let redo = document.querySelector("#redo")
+    let body = document.querySelector("body")
+    let wrapper = document.querySelector("#wrapper")
+    // let btn=document.querySelector("#btn")
+
+    let boxes = [];
+    let boxes1 = [];
+
+
+
+
+
+
+    wrapper.addEventListener("click", function (event) {
+        let box = document.createElement("p")
+
+        box.classList = "box"
+
+        let x = event.pageX;
+        let y = event.pageY;
+
+        box.style.left = `${x - 15}px`
+        box.style.top = `${y - 63}px`
+
+        wrapper.appendChild(box)
+        boxes.push(box)
+        boxes1=[];
+            reset.disabled=false;
+            undo.disabled=false;
+            redo.disabled=true;
+
+    })
+       
+
+        reset.addEventListener("click", function () {
+            wrapper.innerHTML = "";
+
+            reset.disabled=true;
+            undo.disabled=true;
+            redo.disabled=true;
+          
+        })
+
+        undo.addEventListener("click", function () {
+           if(boxes.length>0){
+            const lastBox=boxes.pop();
+            wrapper.removeChild(lastBox)
+            boxes1.push(lastBox)
+        
+            reset.disabled=false;
+            undo.disabled=false;
+            redo.disabled=false;
+
+           }
+        })
+        
+        redo.addEventListener("click",function(){
+            if(boxes1.length>0){
+                const redobox=boxes1.pop()
+                wrapper.appendChild(redobox)
+                boxes.push(redobox)
+
+                
+                    reset.disabled=false;
+                    undo.disabled=false;
+                    redo.disabled=false;
+            }
+
+                
+        })
+
+    //     function Disable(){
+         
+    //        let btn= document.querySelector("#btn").Disable=true;
+
+        
+    // }
+
+
+
+
+</script>
+
+</html>

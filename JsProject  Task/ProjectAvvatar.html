@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avvatar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="ProjectAvvatar.css">
+</head>
+
+<body>
+
+    <div class="avvatar_container">
+
+        <div class="avvatar">
+
+            <div class="add">
+                <button id="addbutton">+</button>
+            </div>
+            <div id="adminName"></div>
+
+
+            <div class="new_user">
+
+
+                <h3>User Name</h3>
+                <br>
+
+                <h5>Enter name</h5>
+                <!-- <br> -->
+                <input type="text" name="" id="name" placeholder="Enter Your Name">
+                <br>
+                <div class="btn">
+                    <br>
+                    <button id="cancel1">Cancel</button>
+                    <button id="confirm1">Confirm</button>
+                </div>
+                <i id="x" class="fa-regular fa-circle-xmark"></i>
+            </div>
+
+            <div class="delete_user">
+                <p>Are you sure you want to delete this user?</p>
+                <br>
+
+                <div class="btn2">
+                    <button id="cancel2">Cancel</button>
+                    <button id="confirm2">Confirm</button>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+    let addbutton = document.querySelector("#addbutton")
+    let x = document.querySelector("#x")
+    let newuser = document.querySelector(".new_user")
+    let confirm1 = document.querySelector("#confirm1")
+    let confirm2 = document.querySelector("#confirm2")
+    let cancel1 = document.querySelector("#cancel1")
+    let cancel2 = document.querySelector("#cancel2")
+    let deleteuser = document.querySelector(".delete_user")
+    let avvatar = document.querySelector(".avvatar")
+    let adminName = document.querySelector("#adminName")
+    let nameInput = document.querySelector("#name")
+
+    addbutton.addEventListener("click", function () {
+        newuser.style.display = "block"
+
+    })
+
+
+    confirm1.addEventListener("click", function (e) {
+        e.preventDefault()
+
+        if (nameInput.value == "" && typeof (nameInput.value) != String) {
+            alert("Please enter a valid name")
+        }
+
+        else {
+            let admin = document.createElement("p")
+
+            admin.classList = "admin"
+            admin.innerHTML = nameInput.value[0]
+            admin.style.textTransform="capitalize"
+
+
+
+            let deleteadmin = document.createElement("span")
+            let icon = document.createElement("i")
+            icon.classList = "fa-regular fa-circle-xmark"
+            icon.id = "cross"
+            deleteadmin.append(icon)
+            admin.append(deleteadmin)
+            adminName.append(admin)
+            console.log(admin);
+
+            nameInput.value = ""
+
+            newuser.style.display = "none"
+
+
+
+            deleteadmin.addEventListener("click", function () {
+                // admin.remove()
+
+                deleteuser.style.display = "block"
+
+                cancel2.addEventListener("click", function () {
+                    deleteuser.style.display = "none"
+                    // adminName.innerHTML=""
+
+                })
+
+                confirm2.addEventListener("click", function () {
+                    admin.remove()
+
+                    deleteuser.style.display = "none"
+
+                })
+
+
+
+
+            })
+
+
+        }
+
+
+
+
+
+
+    })
+
+
+
+
+
+
+    x.addEventListener("click", function () {
+
+        newuser.style.display = "none"
+
+    })
+
+    cancel1.addEventListener("click", function () {
+        newuser.style.display = "none"
+        nameInput.value = ""
+
+    })
+
+
+
+
+
+
+
+</script>
+
+</html>

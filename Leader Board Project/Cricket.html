@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket</title>
+    <link rel="stylesheet" href="Cricket.css">
+</head>
+
+<body>
+
+    <div class="cricket_container">
+        <h1>Leader Board</h1>
+
+
+        <input type="text" name="" id="first" placeholder="First Name">
+        <input type="text" name="" id="last" placeholder="First Name">
+        <select name="" id="country">
+            <option selected>Select Country</option>
+            <option value="India ">India</option>
+            <option value="Australia ">Australia</option>
+            <option value="Afghanistan ">Afghanistan</option>
+            <option value="Bangladesh ">Bangladesh</option>
+            <option value="England ">England</option>
+            <option value="Ireland ">Ireland</option>
+            <option value="New Zealand ">New Zealand</option>
+            <option value="Pakistan ">Pakistan</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Sri Lanka ">Sri Lanka</option>
+            <option value="West Indies ">West Indies</option>
+            <option value="Zimbabwe">Zimbabwe</option>
+        </select>
+
+        <input type="number" name="" id="score" placeholder="Player Score">
+
+        <button id="add">Add Player</button>
+
+        <div class="list">
+
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+    let fnameInput = document.querySelector("#first")
+    let lnameInput = document.querySelector("#last")
+    let countryInput = document.querySelector("#country")
+    let scoreInput = document.querySelector("#score")
+    let addbutton = document.querySelector("#add")
+    let list = document.querySelector(".list")
+
+    // let x = 0;
+    let arr = []
+
+    addbutton.addEventListener("click", function (e) {
+        e.preventDefault()
+
+        // let fname=fnameInput.value
+        // let lname=lnameInput.value
+        // let country=countryInput.value
+        // let score=scoreInput.value
+
+
+        let Player = {
+            firstname: fnameInput.value,
+            lastname: lnameInput.value,
+            country: countryInput.value,
+            score: Number(scoreInput.value)
+
+
+        }
+
+        arr.push(Player)
+        shorting()
+        myfunction()
+        clearfuction()
+
+
+
+
+    })
+
+
+    function myfunction() {
+
+        list.innerHTML = ""
+        arr.forEach((Player, index) => {
+
+            let div = document.createElement("div")
+
+            let para1 = document.createElement("p")
+            let para2 = document.createElement("p")
+            let para3 = document.createElement("p")
+            let para4 = document.createElement("p")
+            let para5 = document.createElement("p")
+
+
+            let btn1 = document.createElement("button")
+            let btn2 = document.createElement("button")
+            let btn3 = document.createElement("button")
+
+            para1.innerHTML = index + 1;
+            para2.innerHTML = Player.firstname
+            para3.innerHTML = Player.lastname
+            para4.innerHTML = Player.country
+            para5.innerHTML = Player.score
+
+            div.append(para1, para2, para3, para4, para5, btn1, btn2, btn3)
+            list.append(div)
+
+            btn1.innerHTML = "DEL"
+            btn2.innerHTML = "+5"
+            btn3.innerHTML = "-5"
+
+
+
+            btn1.addEventListener("click", function () {
+                list.removeChild(div)
+                arr.splice(index, 1)
+                clearfuction() 
+                myfunction()
+
+            })
+
+
+            btn2.addEventListener("click", function () {
+                Player.score += 5
+                // para5.innerHTML = Number(para5.innerHTML) + Number(5)
+                shorting()
+                myfunction()
+                // console.log(para5.innerHTML);
+
+            })
+
+
+            btn3.addEventListener("click", function () {
+                // Player.score = Number(Player.score) - Number(5)
+                // para5.innerHTML = Number(para5.innerHTML) - Number(5)
+                Player.score-= 5
+                shorting()
+                myfunction()
+
+
+
+
+
+            })
+        });
+
+
+    }
+
+
+    function shorting() {
+        return (arr.sort((a, b) => b.score - a.score))
+    }
+
+    function clearfuction(){
+        first.value = ""
+        last.value = ""
+        country.value = "Select Country"
+        score.value = ""
+
+    }
+
+
+
+
+
+</script>
+
+</html>

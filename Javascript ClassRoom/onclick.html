@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        /* #test{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        } */
+        #test{
+            width: 100%;
+            height: 100px;
+            background-color: blue;
+            text-align: center;
+            /* align-items: center; */
+            align-content: center;
+        }
+        #para{
+            width: 100%;
+            height: 100px;  
+            background-color: tan;
+            padding: 10px;
+            display: none;
+        }
+
+        h1{
+           color: #fff;
+           cursor: pointer;
+        }
+
+        /* button{
+            margin-top: 10px;
+        } */
+    </style>
+</head>
+<body>
+
+    <div id="test">
+        <h1 onclick="show()" ondblclick="remove()">Click To Show Panel</h1>
+    </div>
+
+    <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit perspiciatis hic libero, voluptatem eaque tenetur fugiat harum repellat veritatis enim?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus at voluptatum quaerat corrupti similique expedita quam quia tempore amet rem dolore, laborum sint reprehenderit cumque pariatur. Provident esse laborum a. Quam, architecto optio, dolore aut molestias non molestiae, neque saepe sapiente accusantium quaerat nobis quas nesciunt. Suscipit laboriosam esse impedit?</p>
+
+    <!-- <button onclick="change()">Click Me</button> -->
+    
+</body>
+
+<script>
+    
+    // function change(){
+    //     let tar=document.getElementById("test");
+    //     tar.style.display="none";
+    // }
+
+
+    function show(){
+        let target =document.getElementById("para")
+        target.style.display="block"
+    }
+
+    function remove(){
+        let target =document.getElementById("para")
+        target.style.display="none"
+    }
+
+</script>
+</html>

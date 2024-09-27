@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Objects</title>
+</head>
+
+<body>
+  <div id="wrapper"></div>
+
+  <script>
+    // let names = [
+    //   "Ranveer",
+    //   "Sunil",
+    //   "Lucky",
+    //   1234512345,
+    //   2345623456,
+    //   1234567890,
+    // ];
+
+    //   console.log(names);
+    //   document.write(names);
+
+    // collection of pairs of key and value is an object
+
+    // let person = {
+    //   name: "Sunil",
+    //   phone: 1234512345,
+    //   age: 25,
+    // };
+
+    //DOT NOTATION
+    // document.write(person.name); //Sunil
+
+    //ARRAY NOTATION
+    // document.write(person["name"]) //Sunil
+
+    // let name = "kuchaur";
+  
+    // document.write(person[name])
+
+    // console.log(person);
+
+    //   document.write(person); //OBJECTS CANNOT BE PRINTED USING DOCUMENT.WRITE
+
+    // for (let i in person){
+    //     document.write(i+":"+ person[i] + "<br>")
+    // }
+
+
+    //Object.keys(), Object.values(), Object.entries()
+    //Object.seal(), Object.freeze(), Object.assign()
+    //Shallow Copy, Deep Copy
+
+
+
+    // const object1 = {
+    //   a: 'somestring',
+    //   b: 42,
+    //   c: false,
+    // };
+
+    // document.write(Object.values(object1))
+
+
+    // seal
+
+    // const object1 = {
+    //   property1: 42
+    // }
+
+    // Object.freeze(object1);
+    // object1.property1 = 33
+    // console.log(object1.property1)
+
+
+    // let obj = {
+    //   name: "sunil",
+    //   age: 25,
+    //   city: "jaipur",
+    //   state: "rajasthan",
+
+
+    //   marks: (maths, science, english) => {
+
+    //     return (maths + science + english)
+    //   },
+
+
+    //   details:{
+    //     address:"vpo barauliran",
+    //     pincode:302001,  
+    //     country:"india",
+    //     city:"jaipur"
+
+
+    //   }
+    // }
+
+    // console.log(obj.details)
+
+
+    // console.log(obj.marks(40, 30, 50))
+    // console.log(Object.keys(obj ))
+
+    // const names = [
+    //     "Ranveer",
+    //     "Harendra",
+    //     "Sonu",
+    //     "Lucky",
+    //     "Pankaj",
+    //     "Anant",
+    //     "Rishabh",
+    //     "Shikhar",
+    //     "Sunil",
+    //   ];
+
+    // // [Ranveer, Harendra, Lucky, Pankaj, Anant....]
+
+    // // [reevnaR, ardneraH......]
+    // let newArr = [];
+    // for (let i = 0; i < names.length; i++) {
+    //   if (names[i].length > 5) {
+    //     newArr = names[i];
+    //     document.write(newArr);
+    //   }
+    // }
+
+    // inside anonymous function this is defined, and points to the caller
+    // inside arrow function this is not defined
+
+    // const person = {
+    //   name: "Rohit",
+    //   age: 33,
+    //   profession: "Full Stack Developer",
+    //   isMarried: true,
+    //   skills: ["HTML", "CSS"],
+    //   work: {
+    //     company: "Full Stack Learning",
+    //     designation: "Owner",
+    //   },
+    //   getIntroduction: function () {
+    //     return "My name is " + this.name;
+    //   },
+    // };
+
+    // console.log(names);
+
+    // for (let i = 0; i < person.length)
+
+    //   person.forEach((value) => {
+    //     document.write(value);
+    //   });
+
+    // name: Rohit
+    // age: 33
+    // profession:Full Stack Developer
+    // isMarried: true
+    // work_company:Full Stack Learning
+    // work_designation: Owner
+
+    // document.write(person.getIntroduction());
+
+    // for (let i in person) {
+    //   if (typeof person[i] === "object" && !person[i].length) {
+    //     for (let r in person[i]) {
+    //       document.write(i + "_" + r + ":" + person[i][r] + "<br>");
+    //     }
+    //   } else document.write(i + ":" + person[i] + "<br>");
+    // }
+
+
+    // const person = {
+    //   name: "Rohit",
+    //   age: 33,
+    //   profession: "Full Stack Developer",
+    //   isMarried: true,
+    //   skills: ["HTML", "CSS"],
+    //   work: {
+    //     company: "Full Stack Learning",
+    //     designation: "Owner",
+    //   },
+    //   getIntroduction: function () {
+    //     return "My name is " + this.name;
+    //   },
+    // };
+
+
+    // const a = person.name;
+    // console.log(a)
+
+    // const a = person.getIntroduction;
+    // console.log(a());
+
+    //call, bind, apply
+
+
+
+    const person = {
+        name: "Harendra",
+        address: {
+          city: "Bharatpur",
+          village: "Barauliran",
+        },
+        details: {
+          job: {
+            designation: "Full Stack Developer",
+            skills: {
+              frontend: "HTML, CSS",
+              backend: "Node, Express",
+            },
+          },
+        },
+      };
+
+      function flattenObjectRecursive(obj){
+        for(let i in obj){
+          if(typeof obj[i]==="object"){
+              document.write(i+"_"+obj[i] + "<br>")
+          }
+          else  document.write(i+ ":"+ obj[i]+ "<br>")
+        }
+       
+        
+      }
+      flattenObjectRecursive(person)
+
+
+
+
+  </script>
+</body>
+
+</html>

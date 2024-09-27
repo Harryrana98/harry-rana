@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+   
+</head>
+<body>
+
+    <style>
+        .calcu_container{
+            background-color: crimson;
+            width: 501px;
+            height: 300px;
+        }
+    </style>
+    <div class="calcu_container">
+        <input type="number" name="" id="num1" placeholder="Enter your first value"><br>
+        <select name="" id="">
+            <option id="operator" value="+">+</option>
+            <!-- <option  id="operator"value="">-</option>
+            <option  id="operator"value="">*</option>
+            <option id="operator" value="">%</option> -->
+        </select><br>
+
+        <input type="number" name="" id="num2" placeholder="Enter your first value"><br>
+
+
+        <button onclick="submit">Submit</button><br>
+
+        <input type="number" name="" id="result"><br>
+    </div>
+    
+</body>
+<script>
+
+        let value1 = document.getElementById("num1").value;
+        let value2= document.getElementById("num2").value
+        let operator = document.getElementById("operator").value;
+        let result = document.getElementById("result").value;
+    
+     
+
+    function submit(){
+
+       
+        if(operator=="+"){
+            result = Number(value1)+Number(value2);
+            console.log(result);
+            
+        }
+
+        // else if(operator=="*"){
+        //     result = Number(value1) * Number(value2);
+
+        // }
+        // else if(operator=="-"){
+        //     result =Number(value1) - Number(value2);
+
+        // }
+        // else if(operator=="%"){
+        //     result = Number(value1) %Number(value2);
+
+        // }
+
+        
+    }
+</script>
+</html>

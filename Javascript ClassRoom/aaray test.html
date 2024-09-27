@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test</title>
+
+</head>
+
+<body>
+
+
+  <script>
+    //   console.log(true + false); //1
+    //   console.log(true + true); //2
+
+    // console.log(10+10+"10"); // Number -> String = 1010
+    // console.log(10 - -"10"); // String -> Number = 0
+
+    // console.log("apple" + 1 + 2 + "Mangoes");
+
+    //   let x = 0;
+    //   for (let i = 0; i < 5; i++) {
+    //     if (i === 3) break;
+    //     else {
+    //       x += i;
+    //     }
+    //   }
+    //   console.log(x);
+
+    //   var x = 0;
+    //   for (let i = 0; i <= 5; i++) {
+    //     for (let j = 0; j <= 5; j++) {
+    //       x += j;
+    //     }
+    //   }
+    //   console.log(x);
+
+    //indexOf, lastIndexOf, slice, substring, substr
+
+    //concatenation
+
+    // IMPLICIT TYPE CASTING
+    //   console.log(1 + "1"); //11
+
+    //   console.log(typeof(2 + "4" + 6)); //246
+
+    // console.log(10 + "2"); //Number -> String
+    // console.log(10 % "3"); //String -> Number
+
+    // console.log("Apples" + 1 + 2);
+
+    // console.log(1 + 2 + "Apples" + 3 + 4 + "Mangoes");
+
+    // EXPLICIT TYPE CASTING
+
+    //   let num = "100";
+
+    //   console.log(Number(num) + 1);
+
+    // *
+    // **
+    // ***
+    // ****
+    // *****
+
+    // for (let i = 1; i <= 5; i++) {
+    //   for (let j = 1; j <= i; j++) {
+    //     document.write("*");
+    //   }
+    //   document.write("<br>");
+    // }
+
+    //   *****
+    //   ****
+    //   ***
+    //   **
+    //   *
+    // for (let i = 5; i >= 1; i--) {
+    //   for (let j = 1; j <= i; j++) {
+    //     document.write("*");
+    //   }
+    //   document.write("<br>");
+    // }
+
+    // 54321
+    // 4321
+    // 321
+    // 21
+    // 1
+
+    // for (let i = 6; i > 1; i--) {
+    //   for (let j = i - 1; j >= 1; j--) {
+    //     document.write(j);
+    //   }
+    //   document.write("<br>");
+    // }
+
+    // 54321
+    // 5432
+    // 543
+    // 54
+    // 5
+
+    // let str = "My name is Lucky. I am 18 years old";
+    // let name;
+    // console.log(str.lastIndexOf("r")); //-1
+
+    // console.log(str.indexOf("i"));
+
+    // console.log(str.includes("r")); 
+
+    //slice, substring, substr
+    // let dotPosition = str.lastIndexOf(".");
+    // name = str.slice(10, dotPosition);
+
+    // console.log(name);
+
+    //ARRAY METHODS: push, pop, shift, unshift, indexOf, lastIndexOf, includes, slice, splice, forEach, map, filter, reduce
+
+    // let names = ["Harendra", "Shikhar"];
+
+    // const a = names.push("Lucky", "Pankaj");
+    // const b = names.unshift("Manish", "Sidharth");
+    // const c = names.pop();
+    // const d = names.pop(); //[M, Si, H, Sh ]
+    // const e = names.push("Juhi", "Chameli"); //[M, Si, H, Sh, Ju, Ch ]
+    // const f = names.shift();
+    // const g = names.shift(); //[H, Sh, Ju, Ch ]
+    // const h = names.unshift("Juhi", "Chameli");
+    // //[Juhi, Chameli, Harenrda, Shikhar, Juhi, Chameli ]
+
+    // console.log(h); //6
+    // console.log(names[0]); //Juhi
+    // console.log(names[5]); //Chameli
+
+    // names.push("Ranveer");
+    // names.pop();
+    // names.shift();
+    // names.unshift("Sunil", "Lucky", "Rishabh");
+    // names.pop();
+    // names.pop();
+    // names.pop();
+    // names.push("Shikhar");
+
+    // console.log(names.length);
+    // console.log(names[0]);
+
+    // const numbers = [12, 11, 40];
+    // numbers.push(1, 2, 3);
+    // numbers.pop();
+    // numbers.pop();
+    // numbers.unshift(1, 2, 3);
+    // numbers.shift(); //[3,12,11]
+    // // console.log(numbers[0] + numbers[1]);
+
+    // const a = numbers.pop();
+    // const b = numbers.pop();
+    // const c = numbers.shift();
+    // // console.log(numbers.length);
+
+    // console.log(
+    //   numbers[0] + numbers[numbers.length - 1] - numbers[numbers.length - 2]
+    // ); //
+
+    // const arr = [10 > 5, 5 < 10, 10 < 5];
+
+    // console.log(arr[0] + arr[2]);
+
+    // const name = "Harendra";
+    // name.slice(0,4)
+
+    // const names = [
+    //   "Juhi",
+    //   "Chameli",
+    //   "Harenrda",
+    //   "Shikhar",
+    //   "Juhi",
+    //   "Chameli",
+    // ];
+
+    // const a = names.slice(0, 4); //["Juhi", "Chameli", "Harendra", "Shikhar"]
+    // console.log(a[0].length + a[3].length - a[2].length); //4 1
+
+    // const names = [
+    //   "Juhi",
+    //   "Chameli",
+    //   "Harenrda",
+    //   "Shikhar",
+    //   "Juhi",
+    //   "Chameli",
+    // ];
+    // console.log(names);
+    // document.write(names);
+
+    // for(let i=0;i<names.length;i++){
+    //   document.write(names[i] + " ");
+    // }
+
+    // names.forEach( (name) => {
+    //   document.write(name + " ");
+    // });
+
+    // const numbers = [3, 4, 5, 6];
+
+    // numbers.forEach((n) => {
+    //   document.write(n * n + "<br>");
+    // });
+
+    // numbers.map((n) => {
+    //   document.write(n * n + "<br>");
+    // });
+
+    //MDN
+    //map, reduce, filter, some, every, find, findIndex
+
+     // map
+    // const ARRAY = [2, 1, 4, 6, 8]
+
+    // const map = ARRAY.map((y) => y * 2);
+    // console.log(map);
+
+    // const numbers = [1, 4, 9];
+    // const roots = numbers.map((num) => Math.sqrt(num));
+    // console.log(roots);
+
+
+    // var harry=["naman","ajeet","kia","rohitjain","pankaj"]
+
+    // var hr=harry.map((a) => a.length)
+    // console.log(hr)
+
+    let object=[{
+      name:"Rohan",
+      Gender:"male"
+    },{
+       name:"Mohan",
+      Gender:"male"
+     
+    },{
+       name:"Roshni",
+      Gender:"Female"
+    },{
+      name:"Payal",
+      Gender:"Female"
+    },{
+      name:"Chinki",
+      Gender:"Female"
+    }]
+
+    // let result = object.filter((hari) => (hari.Gender=="Female"))
+
+    console.log(object)
+   
+    
+
+
+    // const array=[2,4,6,8,10]
+
+    // const into=array.map((x)=> x*10);
+    // console.log(into)
+
+
+     // reduce
+
+
+
+
+
+  </script>
+</body>
+
+</html>

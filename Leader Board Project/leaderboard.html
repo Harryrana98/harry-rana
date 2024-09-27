@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leader Board</title>
+    <link rel="stylesheet" href="leaderboard.css">
+</head>
+
+<body>
+
+    <div class="leader_board">
+        <h1>Leader Board</h1>
+
+        <form action="">
+            <input type="text" name="" id="first" placeholder="First name">
+            <input type="text" name="" id="last" placeholder="Last name">
+            <select name="" id="country">
+                <option selected>Select Country</option>
+                <option value="india">India</option>
+                <option value="southafrica">South Africa</option>
+                <option value="shrilanka">Sri Lanka</option>
+                <option value="newzeland">New zealand</option>
+                <option value="pakistan">Pakistan</option>
+            </select>
+            <input type="text" name="" id="score" placeholder="Player Score">
+        </form>
+
+
+        <button id="addplayer">Add Player</button>
+
+        <table id="table">
+            <tbody></tbody>
+
+        </table>
+
+
+    </div>
+
+</body>
+
+<script>
+    let first = document.querySelector("#first")
+    let last = document.querySelector("#last")
+    let scoreInput = document.querySelector("#score")
+    let countrySelect = document.querySelector("#country")
+    let addplayerbutton = document.querySelector("#addplayer")
+    let table = document.querySelector("#table")
+    let x = 0;
+    let tablebody=document.querySelector("tbody")
+
+    let arr = []
+
+    addplayerbutton.addEventListener("click", function (e) {
+        e.preventDefault()
+        let Player = {
+            first: first.value,
+            last: last.value,
+            score: scoreInput.value,
+            country: countrySelect.value,
+        }
+
+        arr.push(Player)
+        short()
+        myfunction()
+        clearfuction()
+
+    })
+
+
+    function short(){
+        (arr.sort((a,b)=>b.score-a.score))
+    }
+    function myfunction() {
+        tablebody.innerHTML=""
+        arr.forEach((Player,index) => {
+
+            let tr = document.createElement("tr")
+            let td1 = document.createElement("td")
+            let td2 = document.createElement("td")
+            let td3 = document.createElement("td")
+            let td4 = document.createElement("td")
+            let td5 = document.createElement("td")
+            let botton1 = document.createElement("button")
+            let botton2 = document.createElement("button")
+            let botton3 = document.createElement("button")
+            botton1.innerHTML = "Del"
+            botton2.innerHTML = "+5"
+            botton3.innerHTML = "-5"
+
+            td1.innerHTML = index+1
+            td2.innerHTML = Player.first
+            td3.innerHTML = Player.last
+            td4.innerHTML = Player.country
+            td5.innerHTML = Player.score
+
+            tr.append(td1, td2, td3, td4, td5,botton1, botton2, botton3)
+            tablebody.append(tr)
+
+
+            botton2.addEventListener("click", function () {
+                Player.score = Number(Player.score) + Number(5)
+                short()
+                myfunction()
+            })
+            botton3.addEventListener("click", function () {
+                Player.score = Number(Player.score ) - Number(5)
+                 short()
+                 myfunction()
+            })
+            botton1.addEventListener("click", function () {
+                // tablebody.removeChild(tr)
+                arr.splice(index, 1)
+                 short()
+                 myfunction()
+                // tablebody.innerHTML=""
+            })
+
+           
+
+
+        }) 
+    }
+
+    function clearfuction(){
+        first.value = ""
+        last.value = ""
+        country.value = "Select Country"
+        score.value = ""
+        
+    }
+
+
+    
+
+
+</script> 
+
+</html>

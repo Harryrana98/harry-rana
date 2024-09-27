@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String</title>
+</head>
+
+<body>
+
+  <script>
+
+    var str = "Harendra singh rana"
+
+    // console.log(str.length)
+
+    // console.log(str.charAt(8))
+    console.log(str.indexOf('h'));
+
+
+    // var str="harry rana"
+    // console.log(str.toUpperCase())
+
+
+
+    // var str="HARRY RANA"
+    // console.log(str.toLowerCase())
+
+
+    // var str="Harendra rana harendra"
+    // console.log(str.replaceAll("Harendra" , "hariom"))
+
+    const myString = "Every green bus drives fast.";
+
+    // Using length property and charAt() method
+    const lengthWay = myString.charAt(myString.length - 1);
+    console.log(lengthWay);
+
+
+    const sliceWay = myString.slice(-2, -1);
+
+    console.log(sliceWay);
+
+
+
+    const sentence = 'The quick brown fox jumps over the lazy dog.';
+
+    const word = 'cat';
+
+    console.log(`The word "${word}" ${sentence.includes(word) ? 'is' : 'is not'} in the sentence`,
+    );
+
+  </script>
+
+</body>
+
+</html>

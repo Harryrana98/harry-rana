@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show And Hide</title>
+    <style>
+
+        body{
+            background-color: aqua;
+        }
+        .box {
+            width: 40%;
+            height: 250px;
+            border-radius: 10px;
+            margin: 100px auto;
+
+
+            background-color: maroon;
+        }
+
+        #para {
+            height: 110px;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .btn{
+            width: 180px;
+            margin: auto;
+            
+        }
+
+        button {
+            width: 80px;
+            height: 30px;
+            border-radius: 20px;
+            border: 2px solid #fff;
+            background-color: maroon;
+            color: #fff;
+            margin-left: 8px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit non, rerum officiis ullam
+            consequuntur animi voluptatibus facilis in est Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Quibusdam, velit.</p>
+
+        <div class="btn">
+            <button onclick="hide()">Hide</button>
+            <button onclick="show()">Show</button>
+
+        </div>
+    </div>
+
+</body>
+
+<script>
+
+    function hide() {
+        let hide = document.getElementById("para")
+        hide.innerHTML = ""
+
+    }
+
+    function show() {
+        let show = document.getElementById("para")
+        show.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit non, rerum officiis ullam consequuntur animi voluptatibus facilis in est Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam, velit."
+    }
+</script>
+
+</html>

@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+h4{
+    margin-top: 10px;
+    font-weight: 400;
+}
+h1{
+    font-size: 20px;
+}
+
+span{
+    color: gray;
+    font-weight: 200;
+}
+
+body{
+    background-color: cadetblue;
+    height: 100vh;
+
+}
+
+.jacket_box{
+  width: 30%;
+  margin:  auto;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 10px;
+  height: 330px;
+  overflow: hidden;
+  position: relative;
+ 
+}
+
+.jacket{
+  width: 70%;
+  margin: auto;
+ 
+  
+}
+
+.jacket img{
+    width: 100%;
+}
+
+.text {
+    padding: 10px;
+    position: absolute;
+    transition: all 500ms;
+    background-color: #fff;
+    width: 100%;
+    top: 80%;
+    box-shadow: -1px -1px 4px black;
+}
+
+.text ul{
+    display: flex;
+    list-style: none;
+}
+
+.text ul li a{
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.product{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.box{
+    display: flex;
+}
+
+.color1{
+    height: 20px;
+    width: 20px;
+    background-color: yellow;
+    margin-left: 4px;
+}
+.color2{
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    margin-left: 4px;
+}
+.color3{
+    height: 20px;
+    width: 20px;
+    background-color: green;
+    margin-left: 4px;
+}
+.color4{
+    height: 20px;
+    width: 20px;
+    background-color: purple;
+    margin-left: 4px;
+}
+.color5{
+    height: 20px;
+    width: 20px;
+    background-color: skyblue;
+    margin-left: 4px;
+}
+
+button{
+    width: 100%;
+    background: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    height: 27px;
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+
+
+.jacket_box:hover .text{
+    top: 30%;
+}

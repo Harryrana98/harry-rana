@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <button id="btn1">Click Me</button>
+        <button id="btn2">Add Me</button>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    let wrapper=document.querySelector("#wrapper")
+    let clickMe = document.querySelector("#btn1")
+    let addMe = document.querySelector("#btn2")
+
+    let arr1 = ["Harendra", "Sikhar", "Anant"," Rishabh",]
+    let arr2 = ["Harry"," Ravi"," Anuj", "Rishi",]
+
+    clickMe.addEventListener("click", function () {
+        if(arr1.length>0){
+
+            const lastarr = arr1.pop()
+            arr2.push(lastarr)
+            // wrapper.innerHTML += lastarr + " ";
+            // wrapper.innerHTML += arr2 + " ";
+            // wrapper.replaceChild(lastarr)
+            // arr2.push(arr1.pop())
+    
+            console.log(lastarr);
+        }
+
+    })
+
+
+    addMe.addEventListener("click",function(){
+        if(arr2.length>0){
+
+            arr1.push(arr2.pop())
+            console.log(arr1);
+        }
+        
+    })
+</script>

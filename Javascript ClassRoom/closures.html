@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    <div id="wrapper"></div>
+
+    <script>
+        // CLOSURES: functions defined inside another functions with access to the parent function's scope
+
+        function init(){
+            var x =3;
+            return function (x) {
+                return x+x
+            }
+        
+            var x = 1;
+        }
+        
+        // document.write(init())
+        const addition=init()
+        document.write(addition(200))
+
+    </script>
+</body>
+</html>
