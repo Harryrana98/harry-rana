@@ -38,7 +38,7 @@
                     <button id="cancel1">Cancel</button>
                     <button id="confirm1">Confirm</button>
                 </div>
-                <i id="x" class="fa-regular fa-circle-xmark"></i>
+                <i id="remove" class="fa-regular fa-circle-xmark"></i>
             </div>
 
             <div class="delete_user">
@@ -62,8 +62,20 @@
 </body>
 
 <script>
+
+const colors=[
+        {backgroundColor:"#02343F", color:"#F0EDCC"},
+        {backgroundColor:"#331B3F", color:"#ACC7B4"},
+        {backgroundColor:"#0A174E", color:"#F5D042"},
+        {backgroundColor:"#07553", color:"#CED46A"},
+        {backgroundColor:"#50586C", color:"#DCE2F0"},
+        {backgroundColor:"#815854", color:"#F9EBDE"},
+        {backgroundColor:"#1E4174", color:"#DDA94B"},
+        {backgroundColor:"#A4193D", color:"#FFDFB9"},
+        {backgroundColor:"#1AAFBC", color:"#80634C"},
+    ]
     let addbutton = document.querySelector("#addbutton")
-    let x = document.querySelector("#x")
+    let remove= document.querySelector("#remove")
     let newuser = document.querySelector(".new_user")
     let confirm1 = document.querySelector("#confirm1")
     let confirm2 = document.querySelector("#confirm2")
@@ -73,6 +85,12 @@
     let avvatar = document.querySelector(".avvatar")
     let adminName = document.querySelector("#adminName")
     let nameInput = document.querySelector("#name")
+
+
+    function randomcolors(){
+        return Math.floor(Math.random()*colors.length)
+       
+    }
 
     addbutton.addEventListener("click", function () {
         newuser.style.display = "block"
@@ -85,14 +103,18 @@
 
         if (nameInput.value == "" && typeof (nameInput.value) != String) {
             alert("Please enter a valid name")
-        }
+        }  
 
         else {
             let admin = document.createElement("p")
 
             admin.classList = "admin"
             admin.innerHTML = nameInput.value[0]
-            admin.style.textTransform="capitalize"
+            const objrandom=colors[randomcolors()]
+            admin.style.backgroundColor = objrandom.backgroundColor
+            admin.style.color = objrandom.color
+
+            admin.style.textTransform = "capitalize"
 
 
 
@@ -103,7 +125,6 @@
             deleteadmin.append(icon)
             admin.append(deleteadmin)
             adminName.append(admin)
-            console.log(admin);
 
             nameInput.value = ""
 
@@ -112,13 +133,11 @@
 
 
             deleteadmin.addEventListener("click", function () {
-                // admin.remove()
-
                 deleteuser.style.display = "block"
 
                 cancel2.addEventListener("click", function () {
                     deleteuser.style.display = "none"
-                    // adminName.innerHTML=""
+                
 
                 })
 
@@ -128,28 +147,11 @@
                     deleteuser.style.display = "none"
 
                 })
-
-
-
-
             })
-
-
         }
-
-
-
-
-
-
     })
 
-
-
-
-
-
-    x.addEventListener("click", function () {
+    remove.addEventListener("click", function () {
 
         newuser.style.display = "none"
 

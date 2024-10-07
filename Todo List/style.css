@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-image: url(https://www.teahub.io/photos/full/87-879470_computer-programming-coding-technology.jpg);
+}
+#wrapper h1{
+    margin:50px 0px 20px 0px;
+    font-size: 60px;
+    font-weight: 900;
+    text-shadow: 1px 1px 2px;
+}
+
+.div{
+    background-color: #e1a964;
+    padding: 8px 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+i.fa-solid.fa-pencil{
+    margin: 0px 10px;
+
+}
+#task{
+    width: 75%;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+#addbtn{
+    width: 23%;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.text{
+    padding-left: 10px;
+}
+

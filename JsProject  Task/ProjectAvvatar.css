@@ -1,17 +1,17 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
-.add{
+.add {
     /* margin: auto; */
     /* display: flex; */
 
 }
 
-#addbutton{
+#addbutton {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -19,27 +19,27 @@
     font-size: 30px;
 }
 
-.avvatar_container{
-  background-color:#6441A5 ;
-  height: 100vh;
-  width: 100%;
-  display: flex;
+.avvatar_container {
+    background-color: #6441A5;
+    height: 100vh;
+    width: 100%;
+    display: flex;
 }
 
-.avvatar{
+.avvatar {
     background-color: #fff;
     height: 60vh;
     width: 55%;
-    margin: auto; 
+    margin: auto;
     border-radius: 10px;
     display: flex;
-     box-shadow: 2px 2px 10px ;
-     position: relative;
-     align-items: center;
-     justify-content: center;
+    box-shadow: 2px 2px 10px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
 }
 
-.new_user{
+.new_user {
     background-color: silver;
     height: 30vh;
     width: 40%;
@@ -51,19 +51,20 @@
     top: 50px;
 }
 
-.new_user h3{
+.new_user h3 {
     background-color: #6e6c6c;
     height: 40px;
     align-content: center;
     color: #fff;
     font-weight: 100;
 }
-.btn{
-    background-color:  #6e6c6c;
+
+.btn {
+    background-color: #6e6c6c;
     margin-top: 32px;
 }
 
-#cancel1{
+#cancel1 {
     width: 28%;
     height: 30px;
     border: none;
@@ -74,18 +75,18 @@
     font-weight: 100;
 }
 
-#confirm1{
+#confirm1 {
     width: 28%;
     height: 30px;
     border: none;
     margin-bottom: 10px;
-    background-color:green;
+    background-color: green;
     border-radius: 10px;
     color: #fff;
     font-weight: 100;
 }
 
- #x{
+#remove {
     border-radius: 50%;
     border: none;
     position: absolute;
@@ -94,7 +95,7 @@
 
 }
 
-.delete_user{
+.delete_user {
     height: 15vh;
     width: 40%;
     background-color: silver;
@@ -102,18 +103,14 @@
     display: none;
     position: absolute;
 }
- 
-.delete_user p{
-}
 
-
-.btn2{
+.btn2 {
     background-color: #6e6c6c;
     text-align: end;
-   
+
 }
 
-#cancel2{
+#cancel2 {
     width: 28%;
     height: 30px;
     border: none;
@@ -123,18 +120,19 @@
     font-weight: 100;
     margin: 5px 5px;
 }
-#confirm2{
+
+#confirm2 {
     width: 28%;
     height: 30px;
     border: none;
-    background-color:green;
+    background-color: green;
     border-radius: 10px;
     color: #fff;
     font-weight: 100;
     margin: 5px 5px;
 }
 
-.admin{
+.admin {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -143,23 +141,19 @@
     text-align: center;
     align-content: center;
     font-weight: bold;
-    background-color:#43cea2;
+    background-color: #43cea2;
     border: none;
-
     position: relative;
 }
 
-#adminName{
+#adminName {
     display: flex;
 }
 
-i#cross{
+i#cross {
     position: absolute;
     left: 20px;
-    bottom:27px;
-
+    bottom: 27px;
+    color: red;
 }
-
-
-
 

@@ -56,6 +56,36 @@
 
 <script>
 
+
+  const colors=[
+    {backgroundColor :"black" },
+    {backgroundColor :"white" },
+    {backgroundColor :"yellow" },
+    {backgroundColor :"red" },
+    {backgroundColor :"purple" },
+    {backgroundColor :"green" },
+    {backgroundColor :"blue" },
+    {backgroundColor :"orange" },
+    {backgroundColor :"brown" },
+    {backgroundColor :"pink" },
+    {backgroundColor :"gray" },
+    {backgroundColor :"violet" },
+    {backgroundColor :"aqua" },
+    {backgroundColor :"silver" },
+    {backgroundColor :"teal" },
+    {backgroundColor :"turquoise" },
+    {backgroundColor :"tan" },
+    {backgroundColor :"lavender" },
+    {backgroundColor :"maroon" },
+    {backgroundColor :"olive" },
+    {backgroundColor :"navy" },
+
+  ]
+
+
+
+
+
     let reset = document.querySelector("#reset")
     let undo = document.querySelector("#undo")
     let redo = document.querySelector("#redo")
@@ -67,68 +97,79 @@
     let boxes1 = [];
 
 
-
-
+    
+    
+    
+    
+    
+    function randomcolors(){
+        return Math.floor(Math.random()*colors.length)
+    }
 
 
     wrapper.addEventListener("click", function (event) {
         let box = document.createElement("p")
 
+        
         box.classList = "box"
-
+        
         let x = event.pageX;
         let y = event.pageY;
-
+        
         box.style.left = `${x - 15}px`
         box.style.top = `${y - 63}px`
-
+        
         wrapper.appendChild(box)
         boxes.push(box)
         boxes1=[];
-            reset.disabled=false;
-            undo.disabled=false;
-            redo.disabled=true;
 
+        const colorchange=colors[randomcolors()]
+        box.style.backgroundColor=colorchange.backgroundColor
+        reset.disabled=false;
+        undo.disabled=false;
+        redo.disabled=true;
+        
     })
-       
-
-        reset.addEventListener("click", function () {
-            wrapper.innerHTML = "";
-
-            reset.disabled=true;
-            undo.disabled=true;
-            redo.disabled=true;
-          
-        })
-
-        undo.addEventListener("click", function () {
-           if(boxes.length>0){
+    
+    
+    reset.addEventListener("click", function () {
+        wrapper.innerHTML = "";
+        
+        reset.disabled=true;
+        undo.disabled=true;
+        redo.disabled=true;
+        
+    })
+    
+    undo.addEventListener("click", function () {
+        if(boxes.length>0){
             const lastBox=boxes.pop();
             wrapper.removeChild(lastBox)
             boxes1.push(lastBox)
-        
+            
             reset.disabled=false;
             undo.disabled=false;
             redo.disabled=false;
-
-           }
-        })
+            
+        }
+    })
+    
+    redo.addEventListener("click",function(){
+        if(boxes1.length>0){
+            const redobox=boxes1.pop()
+            wrapper.appendChild(redobox)
+            boxes.push(redobox)
+            
+            
+            reset.disabled=false;
+            undo.disabled=false;
+            redo.disabled=false;
+        }
         
-        redo.addEventListener("click",function(){
-            if(boxes1.length>0){
-                const redobox=boxes1.pop()
-                wrapper.appendChild(redobox)
-                boxes.push(redobox)
-
-                
-                    reset.disabled=false;
-                    undo.disabled=false;
-                    redo.disabled=false;
-            }
-
-                
-        })
-
+        
+    })
+    
+   
     //     function Disable(){
          
     //        let btn= document.querySelector("#btn").Disable=true;
