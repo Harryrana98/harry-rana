@@ -10,7 +10,7 @@ body{
     display: flex;
     justify-content: center;
     text-align: center;
-    background-image: url(https://www.teahub.io/photos/full/87-879470_computer-programming-coding-technology.jpg);
+    background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(https://www.teahub.io/photos/full/87-879470_computer-programming-coding-technology.jpg);
 }
 #wrapper h1{
     margin:50px 0px 20px 0px;

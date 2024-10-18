@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    height: 100vh;
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.flip_container{
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 65%;
+    display: none;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 130px;
+    height: 100px;
+    perspective: 1000px;
+    margin: 0.4rem;
+
+    
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    /* transform: rotateY(180deg); */
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+    border-radius: 5px;
+  }
+  .flip-card-front img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 5px;
+    width: 130px;
+    height: 100px;
+
+  }
+
+  .flip-card-back img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+
+#start{
+    padding: 7px 30px;
+    border: 2px solid;
+    border-radius: 7px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.backSide{
+    transform: rotateY(180deg);
+}
+
+#gameover{
+  display: none;
+  color: #fff;
+  position: absolute;
+
+}
+
+#thanks{
+  color: #fff;
+  position: absolute;
+  top: 12rem;
+  display: none;
+  
+}
+
+#timmer{
+  position: absolute;
+  top: 20px;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: red;
+  text-align: center;
+  align-content: center;
+  color: #fff;
+  /* right: 100px; */
+}
+
+/* .flip-card{
+
+    display: none;
+}
+
+.flip-card-inner{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+
+}
+
+.box{
+    width: 130px;
+    height: 100px;
+    background-color: aqua;
+    border-radius: 5px;
+    margin: 5px;
+    transition: transform 0.7s;
+    
+}
+
+.flip{
+    transform: rotateY(180deg);
+    background-image: url(https://images.pexels.com/photos/1191710/pexels-photo-1191710.jpeg?auto=compress&cs=tinysrgb&w=400);
+} */

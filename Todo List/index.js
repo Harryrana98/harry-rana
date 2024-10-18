@@ -15,6 +15,9 @@ const colors=[
     {backgroundColor:"#1AAFBC", color:"#80634C"},
 ]
 
+const userStoreValue=[]
+let count=0;
+
 AddTaskBtn.addEventListener("click", showTask);
 
 function showTask() {
@@ -30,6 +33,11 @@ function showTask() {
     Div.className = "div"
     let span = document.createElement("span")
     span.textContent = input.value
+    const objUserStore={
+        id:++count,
+        task:span.textContent
+    }
+
     span.style.textTransform = "capitalize"
     Div.appendChild(span)
     TaskDiv.append(Div)
@@ -42,12 +50,9 @@ function showTask() {
     del.appendChild(delicon)
     Div2.append(del)
     Div.append(Div2)
+    objUserStore.push(userStoreValue)
 
-    delicon.addEventListener("click", function () {
-        Div.remove()
-
-    })
-
+    
     let edit = document.createElement("span")
     let editicon = document.createElement("i")
     editicon.className = "fa-solid fa-pencil"
@@ -56,19 +61,30 @@ function showTask() {
     edit.appendChild(editicon)
     Div2.append(edit)
     Div.append(Div2)
+    
+    delicon.addEventListener("click", function () {
+       Remove(Div,objUserStore.id)
 
+    })
     editicon.addEventListener("click", function () {
         input.value = span.textContent
         input.focus()
         AddTaskBtn.addEventListener("click", function () {
             span.textContent = Div.replaceWith(input.value)
         })
-
-
     })
     input.value = ""
 
 }
+
+function Remove(itemDiv,ObjId){
+    userStoreValue=userStoreValue.filter(())
+    itemDiv.remove()
+}
+
+
+
+
 
 function RandomColor(){
 return Math.floor(Math.random()*colors.length)

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+    <link rel="stylesheet" href="travelsalEx.css">
+</head>
+<body>
+    <div class="veg_container">
+        <ul>
+            <li>Onion</li>
+            <li>Patato</li>
+            <li>Tomato</li>
+        </ul>
+    </div>
+
+    <div class="fruits">
+        <ul>
+            <li>Banana</li>
+            <li>Graps</li>
+            <li>Mango</li>
+        </ul>
+    </div>
+    
+</body>
+
+<script>
+    let veg = document.querySelector('.veg_container').firstElementChild.children[0];
+    let fruits = document.querySelector('.fruits').firstElementChild
+    fruits.append(veg.cloneNode(true))
+    let mango=document.querySelector(".fruits").firstElementChild.children[2]
+    let Li=document.createElement("li")
+    Li.innerHTML="Apple"
+    mango.replaceWith(Li)
+    fruits.append(Li)
+    console.log(mango);
+    
+
+</script>
+</html>
